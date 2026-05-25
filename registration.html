@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration — CDO PWD Portal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="grid-container nav-wrapper">
+            <div class="nav-brand">
+                <h1>CDO PWD Portal</h1>
+                <span>Cagayan de Oro City</span>
+            </div>
+            <nav class="nav-links">
+                <a href="index.html" class="back-link">
+                    <span class="material-icons">arrow_back</span> 
+                    <span class="back-text">Back to Home</span>
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="form-banner">
+        <div class="grid-container">
+            <h2>PWD ID Online Application</h2>
+            <div class="step-tracker">
+                <div class="step step-active" data-step="1">
+                    <span class="step-num">1</span>
+                    <span class="step-label">Identifying Details</span>
+                </div>
+                <div class="step" data-step="2">
+                    <span class="step-num">2</span>
+                    <span class="step-label">Disability Categories</span>
+                </div>
+                <div class="step" data-step="3">
+                    <span class="step-num">3</span>
+                    <span class="step-label">Education & Work</span>
+                </div>
+                <div class="step" data-step="4">
+                    <span class="step-num">4</span>
+                    <span class="step-label">Core Attachments</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main class="grid-container registration-layout">
+        
+        <section class="form-card">
+            <form id="pwd-application-form" action="#" method="POST" class="interactive-form">
+                
+                <div class="form-wizard-panel panel-active" id="panel-step-1">
+                    <div class="panel-inner-header">
+                        <span class="material-icons">assignment_ind</span>
+                        <h4>Step 1: Identifying Information</h4>
+                    </div>
+
+                    <div class="form-fields-matrix">
+                        <div class="form-group full-width">
+                            <label>Application Type <span class="required-asterisk">*</span></label>
+                            <div class="radio-card-group">
+                                <label class="radio-card">
+                                    <input type="radio" name="app_type" value="new" checked> <span>New</span>
+                                </label>
+                                <label class="radio-card">
+                                    <input type="radio" name="app_type" value="renew"> <span>Renew</span>
+                                </label>
+                                <label class="radio-card">
+                                    <input type="radio" name="app_type" value="lost"> <span>Lost ID</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="last-name">Last Name <span class="required-asterisk">*</span></label>
+                            <input type="text" id="last-name" required placeholder="Dela Cruz">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="first-name">First Name <span class="required-asterisk">*</span></label>
+                            <input type="text" id="first-name" required placeholder="Juan">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="middle-name">Middle Name</label>
+                            <input type="text" id="middle-name" placeholder="Abad">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="name-ext">Name Extension</label>
+                            <input type="text" id="name-ext" placeholder="e.g., Jr., III">
+                        </div>
+
+                        <div class="form-group full-width">
+                            <label for="address-street">Address Street <span class="required-asterisk">*</span></label>
+                            <input type="text" id="address-street" required placeholder="House No., Street Name">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="barangay">Barangay <span class="required-asterisk">*</span></label>
+                            <select id="barangay" required>
+                                <option value="" disabled selected>--SELECT--</option>
+
+                                <!--Grouping District 2-->
+                                <optgroup label="DISTRICT 2">
+                                    <option value="AGUSAN">AGUSAN</option>
+                                    <option value="BAIKINGON">BAIKINGON</option>
+                                    <option value="BALUBAL">BALUBAL</option>
+                                    <option value="BALULANG">BALULANG</option>
+                                    <option value="BARANGAY 1">BARANGAY 1</option>
+                                    <option value="BARANGAY 10">BARANGAY 10</option>
+                                    <option value="BARANGAY 11">BARANGAY 11</option>
+                                    <option value="BARANGAY 12">BARANGAY 12</option>
+                                    <option value="BARANGAY 13">BARANGAY 13</option>
+                                    <option value="BARANGAY 14">BARANGAY 14</option>
+                                    <option value="BARANGAY 15">BARANGAY 15</option>
+                                    <option value="BARANGAY 16">BARANGAY 16</option>
+                                    <option value="BARANGAY 17">BARANGAY 17</option>
+                                    <option value="BARANGAY 18">BARANGAY 18</option>
+                                    <option value="BARANGAY 19">BARANGAY 19</option>
+                                    <option value="BARANGAY 2">BARANGAY 2</option>
+                                    <option value="BARANGAY 20">BARANGAY 20</option>
+                                    <option value="BARANGAY 21">BARANGAY 21</option>
+                                    <option value="BARANGAY 22">BARANGAY 22</option>
+                                    <option value="BARANGAY 23">BARANGAY 23</option>
+                                    <option value="BARANGAY 24">BARANGAY 24</option>
+                                    <option value="BARANGAY 25">BARANGAY 25</option>
+                                    <option value="BARANGAY 26">BARANGAY 26</option>
+                                    <option value="BARANGAY 27">BARANGAY 27</option>
+                                    <option value="BARANGAY 28">BARANGAY 28</option>
+                                    <option value="BARANGAY 29">BARANGAY 29</option>
+                                    <option value="BARANGAY 3">BARANGAY 3</option>
+                                    <option value="BARANGAY 31">BARANGAY 31</option>
+                                    <option value="BARANGAY 32">BARANGAY 32</option>
+                                    <option value="BARANGAY 33">BARANGAY 33</option>
+                                    <option value="BARANGAY 34">BARANGAY 34</option>
+                                    <option value="BARANGAY 35">BARANGAY 35</option>
+                                    <option value="BARANGAY 36">BARANGAY 36</option>
+                                    <option value="BARANGAY 37">BARANGAY 37</option>
+                                    <option value="BARANGAY 38">BARANGAY 38</option>
+                                    <option value="BARANGAY 39">BARANGAY 39</option>
+                                    <option value="BARANGAY 4">BARANGAY 4</option>
+                                    <option value="BARANGAY 40">BARANGAY 40</option>
+                                    <option value="BARANGAY 5">BARANGAY 5</option>
+                                    <option value="BARANGAY 6">BARANGAY 6</option>
+                                    <option value="BARANGAY 7">BARANGAY 7</option>
+                                    <option value="BARANGAY 8">BARANGAY 8</option>
+                                    <option value="BARANGAY 9">BARANGAY 9</option>
+                                    <option value="BAYABAS">BAYABAS</option>
+                                    <option value="BAYANGA">BAYANGA</option>
+                                    <option value="BESIGAN">BESIGAN</option>
+                                    <option value="BONBON">BONBON</option>
+                                    <option value="BUGO">BUGO</option>
+                                    <option value="BULUA">BULUA</option>
+                                    <option value="CAMAMAN-AN">CAMAMAN-AN</option>
+                                    <option value="CANITOAN">CANITOAN</option>
+                                    <option value="CARMEN">CARMEN</option>
+                                    <option value="CONSOLACION">CONSOLACION</option>
+                                    <option value="CUGMAN">CUGMAN</option>
+                                    <option value="DANSOLIHON">DANSOLIHON</option>
+                                    <option value="F.S. CATANICO">F.S. CATANICO</option>
+                                    <option value="GUSA">GUSA</option>
+                                    <option value="INDAHAG">INDAHAG</option>
+                                    <option value="IPONAN">IPONAN</option>
+                                    <option value="KAUSWAGAN">KAUSWAGAN</option>
+                                    <option value="LAPASAN">LAPASAN</option>
+                                    <option value="LUMBIA">LUMBIA</option>
+                                    <option value="MACABALAN">MACABALAN</option>
+                                    <option value="MACASANDIG">MACASANDIG</option>
+                                    <option value="MAMBUAYA">MAMBUAYA</option>
+                                    <option value="NAZARETH">NAZARETH</option>
+                                    <option value="PAGALUNGAN">PAGALUNGAN</option>
+                                    <option value="PAGATPAT">PAGATPAT</option>
+                                    <option value="PATAG">PATAG</option>
+                                    <option value="PIGSAG-AN">PIGSAG-AN</option>
+                                    <option value="PUERTO">PUERTO</option>
+                                    <option value="PUNTOD">PUNTOD</option>
+                                    <option value="SAN SIMON">SAN SIMON</option>
+                                    <option value="TABLON">TABLON</option>
+                                    <option value="TAGLIMAO">TAGLIMAO</option>
+                                    <option value="TAGPANGI">TAGPANGI</option>
+                                    <option value="TIGNAPOLOAN">TIGNAPOLOAN</option>
+                                    <option value="TUBURAN">TUBURAN</option>
+                                    <option value="TUMPAGON">TUMPAGON</option>
+                                </optgroup>
+
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="birth-date">Birth Date <span class="required-asterisk">*</span></label>
+                            <input type="date" id="birth-date" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="birth-place">Birth Place</label>
+                            <input type="text" id="birth-place" placeholder="City or Province">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="civil-status">Civil Status <span class="required-asterisk">*</span></label>
+                            <select id="civil-status" required>
+                                <option value="" disabled selected>--SELECT--</option>
+                                <option value="SINGLE">SINGLE</option>
+                                <option value="MARRIED">MARRIED</option>
+                                <option value="WIDOWED">WIDOWED</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="religion">Religion <span class="required-asterisk">*</span></label>
+                            <select id="religion" required>
+                                <option value="" disabled selected>--SELECT--</option>
+                                <option value="Ang Dating Daan">Ang Dating Daan</option>
+                                <option value="Atheist / No religion">Atheist / No religion</option>
+                                <option value="Buddhist">Buddhist</option>
+                                <option value="Church of Jesus Christ and the Latter Day Saints">Church of Jesus Christ and the Latter Day Saints</option>
+                                <option value="El Shaddai">El Shaddai</option>
+                                <option value="Iglesia ni Cristo (Church of Christ)">Iglesia ni Cristo (Church of Christ)</option>
+                                <option value="Jehovah's Witness">Jehovah's Witness</option>
+                                <option value="Muslim / Islam">Muslim / Islam</option>
+                                <option value="Protestants">Protestants</option>
+                                <option value="Roman Catholic">Roman Catholic</option>
+                                <option value="Seventh-Day Adventists">Seventh-Day Adventists</option>
+                                <option value="United Church of Christ in the Philippines">United Church of Christ in the Philippines</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="sex">Sex <span class="required-asterisk">*</span></label>
+                            <select id="sex" required>
+                                <option value="" disabled selected>--SELECT--</option>
+                                <option value="MALE">MALE</option>
+                                <option value="FEMALE">FEMALE</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="blood-type">Blood Type <span class="required-asterisk">*</span></label>
+                            <select id="blood-type" required>
+                                <option value="Unknown / Not Checked">Unknown / Not Checked</option>
+                                <option value="A+">A+</option>
+                                <option value="A-">A-</option>
+                                <option value="B+">B+</option>
+                                <option value="B-">B-</option>
+                                <option value="O+">O+</option>
+                                <option value="O-">O-</option>
+                                <option value="AB+">AB+</option>
+                                <option value="AB-">AB-</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contact-no">Contact No. <span class="required-asterisk">*</span></label>
+                            <input type="tel" id="contact-no" required placeholder="09XXXXXXXXX" maxlength="11" pattern="09[0-9]{9}">
+                        </div>
+
+                        <div class="form-group full-width">
+                            <label>COMELEC Registered Voter?</label>
+                            <div class="radio-card-group">
+                                <label class="radio-card">
+                                    <input type="radio" name="comelec_reg" value="Yes"> <span>Yes</span>
+                                </label>
+                                <label class="radio-card">
+                                    <input type="radio" name="comelec_reg" value="No" checked> <span>No</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sub-form-section-divider">MEMBERSHIP</div>
+                    <div class="checkbox-options-grid">
+                        <label class="checkbox-tile"><input type="checkbox" id="member-sss" name="member_sss"> <span>SSS</span></label>
+                        <label class="checkbox-tile"><input type="checkbox" id="member-gsis" name="member_gsis"> <span>GSIS</span></label>
+                        <label class="checkbox-tile"><input type="checkbox" id="member-philhealth" name="member_philhealth"> <span>PhilHealth</span></label>
+                    </div>
+
+                    <div class="sub-form-section-divider">GUARDIAN</div>
+                    <div class="form-fields-matrix">
+                        <div class="form-group"><label for="guard-name">Guardian's Name</label><input type="text" id="guard-name"></div>
+                        <div class="form-group"><label for="guard-rel">Relationship</label><input type="text" id="guard-rel"></div>
+                        <div class="form-group"><label for="guard-phone">Contact #</label><input type="tel" id="guard-phone"></div>
+                        <div class="form-group"><label for="guard-addr">Address</label><input type="text" id="guard-addr"></div>
+                    </div>
+
+                    <div class="sub-form-section-divider">ORGANIZATION AFFILIATED</div>
+                    <div class="form-fields-matrix">
+                        <div class="form-group"><label for="org-name">Organization Name</label><input type="text" id="org-name"></div>
+                        <div class="form-group"><label for="org-pres">Contact Person</label><input type="text" id="org-pres"></div>
+                        <div class="form-group"><label for="org-cell">Cel. No.</label><input type="tel" id="org-cell"></div>
+                    </div>
+
+                    <div class="panel-action-bar">
+                        <button type="button" class="wizard-nav-btn next-btn" data-next="2">Next Step <span class="material-icons">arrow_forward</span></button>
+                    </div>
+                </div>
+
+                <div class="form-wizard-panel" id="panel-step-2">
+                    <div class="panel-inner-header">
+                        <span class="material-icons">accessible</span>
+                        <h4>Step 2: Type of Disability & Assistive Devices</h4>
+                    </div>
+                    <p class="panel-instructions-text">Select all applicable disability categories and specified conditions:</p>
+
+                    <div class="disability-matrix-grid">
+                        <div class="disability-cat-block">
+                            <div class="cat-block-title">LEARNING DISABILITIES</div>
+                            <label class="checkbox-tile"><input type="checkbox" id="disab-adhd" name="disability_types" value="ADHD"> <span>ADHD</span></label>
+                            <label class="checkbox-tile"><input type="checkbox" id="disab-dyslexia" name="disability_types" value="Dyslexia"> <span>Dyslexia</span></label>
+                            <label class="checkbox-tile"><input type="checkbox" id="disab-dyscalculia" name="disability_types" value="Dyscalculia"> <span>Dyscalculia</span></label>
+                            <label class="checkbox-tile"><input type="checkbox" id="disab-dysgraphia" name="disability_types" value="Dysgraphia"> <span>Dysgraphia</span></label>
+                        </div>
+                        
+                        <div class="disability-cat-block">
+                            <div class="cat-block-title">PSYCHOSOCIAL DISABILITIES</div>
+                            <label class="checkbox-tile"><input type="checkbox" id="disab-mentally-ill" name="disability_types" value="Mentally Ill"> <span>Mentally Ill</span></label>
+                            <label class="checkbox-tile"><input type="checkbox" id="disab-brain-injury" name="disability_types" value="Brain Injury"> <span>Brain Injury</span></label>
+                            <label class="checkbox-tile"><input type="checkbox" id="disab-schizophrenia" name="disability_types" value="Schizophrenia"> <span>Schizophrenia</span></label>
+                        </div>
+
+                        <div class="disability-cat-block">
+                            <div class="cat-block-title">VISUAL DISABILITY</div>
+                            <label class="checkbox-tile"><input type="checkbox" id="disab-total-blind" name="disability_types" value="Total Blindness"> <span>Total</span></label>
+                            <label class="checkbox-tile"><input type="checkbox" id="disab-partial-blind" name="disability_types" value="Partial Blindness"> <span>Partial</span></label>
+                            <label class="checkbox-tile"><input type="checkbox" id="disab-low-vision" name="disability_types" value="Low Vision"> <span>Low Vision</span></label>
+                        </div>
+
+                        <div class="disability-cat-block">
+                            <div class="cat-block-title">DEVELOPMENTAL DISABILITIES</div>
+                            <label class="checkbox-tile"><input type="checkbox" id="disab-mental-retardation" name="disability_types" value="Mental Retardation"> <span>Mental Retardation</span></label>
+                            <label class="checkbox-tile"><input type="checkbox" id="disab-down-syndrome" name="disability_types" value="Down Syndrome"> <span>Down Syndrome</span></label>
+                            <label class="checkbox-tile"><input type="checkbox" id="disab-cerebral-palsy" name="disability_types" value="Cerebral Palsy"> <span>Cerebral Palsy</span></label>
+                            <label class="checkbox-tile"><input type="checkbox" id="disab-autism" name="disability_types" value="Autism"> <span>Autism</span></label>
+                        </div>
+
+                        <div class="disability-cat-block">
+                            <div class="cat-block-title">DEAF & OTHERS</div>
+                            <label class="checkbox-tile"><input type="checkbox" id="disab-hard-hearing" name="disability_types" value="Hard of Hearing"> <span>Hard of Hearing</span></label>
+                            <label class="checkbox-tile"><input type="checkbox" id="disab-deaf" name="disability_types" value="Deaf"> <span>Deaf</span></label>
+                            <label class="checkbox-tile"><input type="checkbox" id="disab-speech-impairment" name="disability_types" value="Speech Impairment"> <span>Speech Impairment</span></label>
+                        </div>
+
+                        <div class="disability-cat-block">
+                            <div class="cat-block-title">ORTHOPEDIC / MUSCULOSKELETAL</div>
+                            <label class="checkbox-tile"><input type="checkbox" id="disab-polio" name="disability_types" value="Polio"> <span>Polio</span></label>
+                            <label class="checkbox-tile"><input type="checkbox" id="disab-stroke" name="disability_types" value="Stroke/Paralyzed"> <span>Stroke / Paralyzed</span></label>
+                            <label class="checkbox-tile"><input type="checkbox" id="disab-amputee" name="disability_types" value="Amputee"> <span>Amputee</span></label>
+                            <label class="checkbox-tile"><input type="checkbox" id="disab-underdeveloped" name="disability_types" value="Underdeveloped"> <span>Underdeveloped</span></label>
+                        </div>
+                    </div>
+
+                    <div class="sub-form-section-divider">ASSISTIVE DEVICES USED</div>
+                    <div class="checkbox-options-grid">
+                        <label class="checkbox-tile"><input type="checkbox" id="device-wheelchair" name="assistive_devices" value="Wheel Chair"> <span>Wheel Chair</span></label>
+                        <label class="checkbox-tile"><input type="checkbox" id="device-crutches" name="assistive_devices" value="Crutches"> <span>Crutches</span></label>
+                        <label class="checkbox-tile"><input type="checkbox" id="device-walker" name="assistive_devices" value="Walker"> <span>Walker</span></label>
+                        <label class="checkbox-tile"><input type="checkbox" id="device-hearing-aid" name="assistive_devices" value="Hearing Aid"> <span>Hearing Aid</span></label>
+                        <label class="checkbox-tile"><input type="checkbox" id="device-glasses" name="assistive_devices" value="Corrective Glasses"> <span>Corrective Eye Glasses</span></label>
+                    </div>
+
+                    <div class="panel-action-bar">
+                        <button type="button" class="wizard-nav-btn prev-btn" data-prev="1"><span class="material-icons">arrow_back</span> Previous</button>
+                        <button type="button" class="wizard-nav-btn next-btn" data-next="3">Next Step <span class="material-icons">arrow_forward</span></button>
+                    </div>
+                </div>
+
+                <div class="form-wizard-panel" id="panel-step-3">
+                    <div class="panel-inner-header">
+                        <span class="material-icons">work</span>
+                        <h4>Step 3: Employment and Education Status</h4>
+                    </div>
+
+                    <div class="form-fields-matrix">
+                        <div class="form-group full-width">
+                            <label>Employment Status <span class="required-asterisk">*</span></label>
+                            <div class="radio-card-group flex-column-layout">
+                                <label class="radio-card"><input type="radio" name="emp_status" value="Employed" checked> <span>Employed</span></label>
+                                <label class="radio-card"><input type="radio" name="emp_status" value="Unemployed"> <span>Unemployed</span></label>
+                                <label class="radio-card"><input type="radio" name="emp_status" value="Resigned"> <span>Resigned</span></label>
+                                <label class="radio-card"><input type="radio" name="emp_status" value="Retired"> <span>Retired</span></label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="type-employment">Type of Employment</label>
+                            <select id="type-employment">
+                                <option value="">--SELECT--</option>
+                                <option value="Permanent">Permanent</option>
+                                <option value="Self-Employed">Self-Employed</option>
+                                <option value="Contractual">Contractual</option>
+                                <option value="Seasonal">Seasonal</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="nature-employer">Nature of Employer</label>
+                            <select id="nature-employer">
+                                <option value="">--SELECT--</option>
+                                <option value="Private">Private</option>
+                                <option value="Government">Government</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group full-width">
+                            <label for="highest-educ">Highest Educational Attainment <span class="required-asterisk">*</span></label>
+                            <select id="highest-educ" required>
+                                <option value="" disabled selected>--SELECT--</option>
+                                <option value="Elementary">Elementary Graduate</option>
+                                <option value="High School">High School Graduate</option>
+                                <option value="College">College Graduate</option>
+                                <option value="Vocational">Vocational Training</option>
+                                <option value="None">None</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="panel-action-bar">
+                        <button type="button" class="wizard-nav-btn prev-btn" data-prev="2"><span class="material-icons">arrow_back</span> Previous</button>
+                        <button type="button" class="wizard-nav-btn next-btn" data-next="4">Next Step <span class="material-icons">arrow_forward</span></button>
+                    </div>
+                </div>
+
+                <div class="form-wizard-panel" id="panel-step-4">
+                    <div class="panel-inner-header">
+                        <span class="material-icons">cloud_upload</span>
+                        <h4>Step 4: Utilities Household & Document Uploads</h4>
+                    </div>
+
+                    <div class="disability-matrix-grid">
+                        <div class="disability-cat-block">
+                            <div class="cat-block-title">HOUSE AND LOT</div>
+                            <label class="checkbox-tile"><input type="checkbox" id="house-owned" name="household_type" value="Owned House & Lot"> <span>Owned House & Lot</span></label>
+                            <label class="checkbox-tile"><input type="checkbox" id="house-rented" name="household_type" value="Rented Home/Lot"> <span>Rented Home/Lot</span></label>
+                            <label class="checkbox-tile"><input type="checkbox" id="house-shared" name="household_type" value="Share with relatives"> <span>Shared with Relatives</span></label>
+                        </div>
+                        <div class="disability-cat-block">
+                            <div class="cat-block-title">WATER CONNECTION</div>
+                            <label class="checkbox-tile"><input type="checkbox" id="water-standard" name="water_type" value="Standard Water System"> <span>Standard Water System</span></label>
+                            <label class="checkbox-tile"><input type="checkbox" id="water-well" name="water_type" value="Deep Well"> <span>Deep Well</span></label>
+                        </div>
+                    </div>
+
+                    <div class="sub-form-section-divider">REQUIRED ATTACHMENTS</div>
+
+                    <div class="file-upload-container">
+                        <div class="file-attachment-upload-row" id="row-id-pic">
+                            <div class="file-meta-info">
+                                <h6>1x1 ID Picture <span class="required-asterisk">*</span></h6>
+                                <p>Recent portrait image frame with a plain white background (JPG, PNG | Max 2MB)</p>
+                            </div>
+                            <div class="custom-file-dropzone">
+                                <label for="file-id-pic" class="dropzone-label">
+                                    <span class="material-icons upload-icon">cloud_upload</span>
+                                    <span class="upload-text">Choose File</span>
+                                </label>
+                                <input type="file" id="file-id-pic" required class="custom-file-input" accept=".jpg, .jpeg, .png">
+                                <div class="file-preview-name" id="preview-id-pic">No file chosen</div>
+                            </div>
+                        </div>
+
+                        <div class="file-attachment-upload-row" id="row-med-cert">
+                            <div class="file-meta-info">
+                                <h6>Medical Certificate <span class="required-asterisk">*</span></h6>
+                                <p>Official diagnosis validating the client's permanent disability condition (PDF, JPG, PNG | Max 5MB)</p>
+                            </div>
+                            <div class="custom-file-dropzone">
+                                <label for="file-med-cert" class="dropzone-label">
+                                    <span class="material-icons upload-icon">cloud_upload</span>
+                                    <span class="upload-text">Choose File</span>
+                                </label>
+                                <input type="file" id="file-med-cert" required class="custom-file-input" accept=".pdf, .jpg, .jpeg, .png">
+                                <div class="file-preview-name" id="preview-med-cert">No file chosen</div>
+                            </div>
+                        </div>
+
+                        <div class="file-attachment-upload-row" id="row-brgy-cert">
+                            <div class="file-meta-info">
+                                <h6>Barangay Certificate of Residency <span class="required-asterisk">*</span></h6>
+                                <p>Verification indicating present physical location residency in CDO (PDF, JPG, PNG | Max 5MB)</p>
+                            </div>
+                            <div class="custom-file-dropzone">
+                                <label for="file-brgy-cert" class="dropzone-label">
+                                    <span class="material-icons upload-icon">cloud_upload</span>
+                                    <span class="upload-text">Choose File</span>
+                                </label>
+                                <input type="file" id="file-brgy-cert" required class="custom-file-input" accept=".pdf, .jpg, .jpeg, .png">
+                                <div class="file-preview-name" id="preview-brgy-cert">No file chosen</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-privacy-notice" style="margin-top: 30px;">
+                        <span class="material-icons text-light">gavel</span>
+                        <p>By finalizing your submission request, you authorize the local CSWDD and Persons with Disability Affairs Office evaluating officers to log and process your data parameters in compliance with the Data Privacy Act of 2012.</p>
+                    </div>
+
+                    <div class="panel-action-bar">
+                        <button type="button" class="wizard-nav-btn prev-btn" data-prev="3"><span class="material-icons">arrow_back</span> Previous</button>
+                        <button type="submit" class="final-submit-btn">Submit Application Form <span class="material-icons">check_circle</span></button>
+                    </div>
+                </div>
+
+            </form>
+        </section>
+
+        <aside class="sticky-sidebar-menu" id="mobile-fab-container">
+            <button type="button" class="fab-trigger-btn" id="fab-toggle" aria-label="View status menu">
+                <span class="material-icons">save</span>
+                <span class="fab-btn-text">Save Progress</span>
+            </button>
+
+            <div class="sidebar-card" id="fab-target-card">
+                <div class="sidebar-header-title" style="display: flex; justify-content: space-between; align-items: center;">
+                    <span>Application Status</span>
+                    <button type="button" id="fab-close" class="fab-close-x-btn">&times;</button>
+                </div>
+                <div class="widget-card-body-padding">
+                    <div class="progress-ring-block" style="gap: 14px;">
+                        <div class="mock-progress-circle" id="wizard-progress-circle">25%</div>
+                        <div class="progress-steps-list">
+                            <p class="p-step active-p" id="sidebar-step-1"><span class="dot"></span> 1. Identifying Details</p>
+                            <p class="p-step" id="sidebar-step-2"><span class="dot"></span> 2. Disability Categories</p>
+                            <p class="p-step" id="sidebar-step-3"><span class="dot"></span> 3. Education & Work</p>
+                            <p class="p-step" id="sidebar-step-4"><span class="dot"></span> 4. Core Attachments</p>
+                        </div>
+                    </div>
+                    <div class="portal-reference-tag-card">
+                        <span>Reference Code:</span>
+                        <strong>8228DD1D3A</strong>
+                    </div>
+
+                    <button type="button" id="btn-save-draft" style="display: flex; align-items: center; justify-content: center; gap: 8px; width: 100%; margin-top: 18px; padding: 12px 16px; background-color: #2B7A2B; color: #ffffff; font-family: 'Inter', sans-serif; font-size: 0.95rem; font-weight: 600; border: none; border-radius: 8px; cursor: pointer; box-shadow: 0 4px 12px rgba(43,122,43,0.15); transition: background-color 0.2s ease, transform 0.1s ease; -webkit-appearance: none; appearance: none;">
+                        <span class="material-icons">save</span> Save Progress
+                    </button>
+                </div>
+            </div>
+        </aside>
+
+    </main>
+
+    <div class="modal" id="modal-save-draft">
+        <div class="modal-content modal-green" id="draft-step-phone">
+            <div class="modal-header">
+                <h3>Save Progress</h3>
+                <span class="close-btn" id="close-draft-modal">&times;</span>
+            </div>
+            <div class="modal-body">
+                <label for="draft-phone-input">Phone Number</label>
+                <input type="tel" id="draft-phone-input" placeholder="e.g. 09XXXXXXXXX" autocomplete="off">
+                
+                <div class="modal-field-footer">
+                    <small>Enter your 11-digit phone number so you can return to your form later.</small>
+                </div>
+                
+                <button type="button" class="modal-submit btn-green" id="submit-draft-phone">Save Progress</button>
+            </div>
+        </div>
+
+        <div class="modal-content modal-green" id="draft-step-success" style="display: none;">
+            <div class="modal-header">
+                <h3>Draft Saved!</h3>
+                <span class="close-btn" id="close-draft-success-modal">&times;</span>
+            </div>
+            <div class="modal-body" style="text-align: center;">
+                <span class="material-icons" style="font-size: 56px; color: var(--card-green); margin-bottom: 12px;">check_circle</span>
+                <p style="font-size: 1.1rem; font-weight: 600; color: var(--text-dark); margin-bottom: 8px;">Your draft has been saved!</p>
+                <small style="color: var(--text-light); line-height: 1.5;">We sent your Reference Code (8228DD1D3A) to your phone via SMS.</small>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="modal-exit-confirm">
+        <div class="modal-content modal-red">
+            <div class="modal-header">
+                <h3>Leave Page?</h3>
+                <span class="close-btn" id="close-exit-modal">&times;</span>
+            </div>
+            <div class="modal-body">
+                <p id="exit-modal-text" style="text-align: center; line-height: 1.6; color: var(--text-mid); margin-bottom: 20px;"></p>
+                
+                <div style="display: flex; gap: 12px; width: 100%;">
+                    <button type="button" class="modal-submit btn-red" id="btn-confirm-exit" style="flex: 1;">Yes, Leave</button>
+                    
+                    <button type="button" class="modal-submit btn-green" id="btn-cancel-exit" style="flex: 1;">Stay Here</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="modal-forgot-code">
+        <div class="modal-content modal-blue" id="forgot-step-phone">
+            <div class="modal-header">
+                <h3>Recover Reference Code</h3>
+                <span class="close-btn">&times;</span>
+            </div>
+            <div class="modal-body">
+                <label for="forgot-phone-input">Registered Phone Number</label>
+                <input type="tel" id="forgot-phone-input" placeholder="e.g. 09XXXXXXXXX" autocomplete="off">
+                
+                <div class="modal-field-footer">
+                    <small>Enter the mobile number linked to your registration profile.</small>
+                </div>
+                
+                <button class="modal-submit btn-blue" id="submit-forgot-phone">Send Verification Code</button>
+            </div>
+        </div>
+
+        <div class="modal-content modal-green" id="forgot-step-success" style="display: none;">
+            <div class="modal-header">
+                <h3>Success!</h3>
+                <span class="close-btn">&times;</span>
+            </div>
+            <div class="modal-body" style="text-align: center; padding: 20px 0;">
+                <span class="material-icons" style="font-size: 56px; color: var(--card-green, #2ecc71); margin-bottom: 12px;">check_circle</span>
+                <p style="font-size: 1.1rem; font-weight: 500; margin-bottom: 8px;">Reference Code Sent Successfully!</p>
+                <p style="color: #666; font-size: 0.9rem; margin-bottom: 4px;">Please check your SMS inbox for your active application reference number.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

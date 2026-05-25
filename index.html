@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CDO PWD Portal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- ── Navbar ── -->
+    <header class="navbar">
+        <div class="grid-container nav-wrapper">
+            <div class="nav-brand">
+                <h1>CDO PWD Portal</h1>
+                <span>Cagayan de Oro City</span>
+            </div>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+            <nav class="nav-links" id="nav-links">
+                <a href="index.html" class="active">Home</a>
+                <a href="faqs.html">FAQs</a>
+                <a href="about.html">About Us</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="grid-container hero-content">
+            <img src="cdo.png" alt="Cagayan de Oro City Logo" class="logo logo-desktop-only">
+            
+            <div class="hero-text">
+                <h2>PWD ID Online Registration</h2>
+                <p>Apply for your ID, save your progress, and check your application status 
+                    — anytime, anywhere, no log-in required.
+                    <br><a href="#" id="link-preview-id" style="color: #ffeb3b; font-weight: 600; text-decoration: underline; font-size: 0.95rem; display: inline-block; margin-top: 8px; cursor: pointer;">View Physical PWD ID Card Sample</a>
+                </p>
+            </div>
+            
+            <img src="pwd.png" alt="PWD Logo" class="logo logo-desktop-only">
+
+            <!-- Logos side-by-side, shown only on mobile -->
+            <div class="hero-logos-mobile">
+                <img src="cdo.png" alt="Cagayan de Oro City Logo" class="logo">
+                <img src="pwd.png" alt="PWD Logo" class="logo">
+            </div>
+        </div>
+    </section>
+
+    <!-- ── Action Cards ── -->
+    <section class="action-cards-container">
+
+        <div class="card card-green" id="btn-start">
+            <div class="icon-circle icon-green">
+                <span class="material-icons">person_add</span>
+            </div>
+            <div class="card-text">
+                <h3>START NEW<br>REGISTRATION</h3>
+                <p>For those who have not started the process of getting their PWD ID yet.</p>
+            </div>
+        </div>
+
+        <div class="card card-blue" id="btn-continue">
+            <div class="icon-circle icon-blue">
+                <span class="material-icons">autorenew</span>
+            </div>
+            <div class="card-text">
+                <h3>CONTINUE<br>REGISTRATION</h3>
+                <p>For those who have started but have not yet completed their registration.</p>
+            </div>
+        </div>
+
+        <div class="card card-red" id="btn-status">
+            <div class="icon-circle icon-red">
+                <span class="material-icons">search</span>
+            </div>
+            <div class="card-text">
+                <h3>REGISTRATION<br>STATUS</h3>
+                <p>Find out how your registration is going after submission.</p>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- ── Requirements ── -->
+    <section class="requirements-section">
+        <div class="requirements-card">
+            <h2>Registration Requirements</h2>
+            <p>Please prepare the following documents to ensure a smooth process. Click any item to see a sample layout.</p>
+            <ul class="req-list">
+                <li id="req-trigger-photo" style="cursor: pointer;">
+                    <span class="material-icons req-icon">portrait</span>
+                    1×1 Picture of Applicant
+                </li>
+                <li id="req-trigger-medical" style="cursor: pointer;">
+                    <span class="material-icons req-icon">medical_information</span>
+                    Medical Certificate / Clinical Abstract
+                </li>
+                <li id="req-trigger-barangay" style="cursor: pointer;">
+                    <span class="material-icons req-icon">article</span>
+                    Barangay Certificate / Valid ID
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- ── Modal: Requirements ── -->
+    <div class="modal" id="modal-visual-preview">
+        <div class="modal-content modal-green modal-preview-card">
+            <div class="modal-header">
+                <h3 id="preview-modal-title">Visual Layout Spec</h3>
+                <span class="close-btn" id="close-preview-modal">&times;</span>
+            </div>
+            <div class="modal-body preview-body-layout">
+                <p id="preview-modal-description" class="preview-text-desc"></p>
+                
+                <div id="single-preview-box" class="single-preview-frame">
+                    <img id="preview-modal-img" src="" alt="Sample Document Asset" class="preview-fluid-img">
+                </div>
+
+                <div id="multi-preview-box" class="multi-preview-stack">
+                    <div class="sub-option-box">
+                        <span class="sub-option-title">Option A: Barangay Document Proof</span>
+                        <img id="preview-img-brgy" src="" alt="Barangay Proof Sample" class="preview-fluid-img-fixed">
+                    </div>
+                    
+                    <div class="sub-option-box">
+                        <span class="sub-option-title">Option B: Government National ID Card (Front & Back)</span>
+                        <div class="national-id-grid">
+                            <img id="preview-img-idfront" src="" alt="National ID Front">
+                            <img id="preview-img-idback" src="" alt="National ID Back">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- ── Footer / Help ── -->
+    <footer class="help-section">
+        <div class="help-content">
+            <div class="contact-info">
+                <h2>Need help with your registration?</h2>
+                <p><strong>CHERYL</strong>&nbsp;— Person With Disability Section</p>
+                <p><span class="material-icons">phone</span> 0953-1122-974</p>
+                <p><span class="material-icons">location_on</span> City Social Welfare Department, City Hall, Cagayan De Oro City</p>
+            </div>
+            <button class="feedback-btn">
+                <span class="material-icons">email</span> Send Feedback / Suggestions
+            </button>
+        </div>
+    </footer>
+
+    <!-- ── Modal: Feedback and Suggestions ── -->
+    <div class="modal" id="modal-feedback">
+        <div class="modal-content modal-yellow">
+            <div class="modal-header">
+                <h3>Feedback / Suggestions</h3>
+                <span class="close-btn">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="modal-input-row">
+                    <label for="feedback-name">Name</label>
+                    <input type="text" id="feedback-name" placeholder="Enter Name" autocomplete="off">
+                </div>
+
+                <div class="modal-input-row">
+                    <label for="feedback-contact">Contact No.</label>
+                    <input type="tel" id="feedback-contact" placeholder="Enter Contact Number" autocomplete="off">
+                </div>
+
+                <div class="modal-input-row">
+                    <label for="feedback-comments">Comments / Suggestions</label>
+                   <textarea id="feedback-comments" placeholder="Enter Comments" rows="5"></textarea>
+                </div>
+                
+                <button class="modal-submit btn-yellow" id="submit-feedback">Submit</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ── Modal: Continue Registration ── -->
+    <div class="modal" id="modal-continue">
+        <div class="modal-content modal-blue">
+            <div class="modal-header">
+                <h3>Continue Registration</h3>
+                <span class="close-btn">&times;</span>
+            </div>
+            <div class="modal-body">
+                <label>Reference Code</label>
+                <input type="text" id="continue-input" placeholder="e.g. 8228DD1D3A" autocomplete="off">
+                
+                <div class="modal-field-footer">
+                    <small>Use the reference code given after starting your registration.</small>
+                </div>
+                
+                <button class="modal-submit btn-blue" id="submit-continue">Continue Registration</button>
+                
+                <div class="modal-bottom-links">
+                    <a href="#" class="forgot-code-link">Forgot Code?</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ── Modal: Registration Status ── -->
+    <div class="modal" id="modal-status">
+        <div class="modal-content modal-red">
+            <div class="modal-header">
+                <h3>Registration Status</h3>
+                <span class="close-btn">&times;</span>
+            </div>
+            <div class="modal-body">
+                <label>Reference Code</label>
+                <input type="text" id="status-input" placeholder="e.g. 8228DD1D3A" autocomplete="off">
+                
+                <div class="modal-field-footer">
+                    <small>Use the reference code given after registration.</small>
+                </div>
+                
+                <button class="modal-submit btn-red" id="submit-status">Retrieve Status</button>
+                
+                <div class="modal-bottom-links">
+                    <a href="#" class="forgot-code-link">Forgot Code?</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="modal-forgot-code">
+        <div class="modal-content modal-blue" id="forgot-step-phone">
+            <div class="modal-header">
+                <h3>Recover Reference Code</h3>
+                <span class="close-btn">&times;</span>
+            </div>
+            <div class="modal-body">
+                <label for="forgot-phone-input">Registered Phone Number</label>
+                <input type="tel" id="forgot-phone-input" placeholder="e.g. 09XXXXXXXXX" autocomplete="off">
+                
+                <div class="modal-field-footer">
+                    <small>Enter the mobile number linked to your registration profile.</small>
+                </div>
+                
+                <button class="modal-submit btn-blue" id="submit-forgot-phone">Send Verification Code</button>
+            </div>
+        </div>
+
+        <div class="modal-content modal-green" id="forgot-step-success" style="display: none;">
+            <div class="modal-header">
+                <h3>Success!</h3>
+                <span class="close-btn">&times;</span>
+            </div>
+            <div class="modal-body" style="text-align: center; padding: 20px 0;">
+                <span class="material-icons" style="font-size: 56px; color: var(--card-green, #2ecc71); margin-bottom: 12px;">check_circle</span>
+                <p style="font-size: 1.1rem; font-weight: 500; margin-bottom: 8px;">Reference Code Sent Successfully!</p>
+                <p style="color: #666; font-size: 0.9rem; margin-bottom: 4px;">Please check your SMS inbox for your active application reference number.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="modal-status-success">
+        <div class="modal-content modal-green">
+            <div class="modal-header">
+                <h3>Application Status Found</h3>
+                <span class="close-btn" id="close-status-success-modal">&times;</span>
+            </div>
+            <div class="modal-body" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+                <span class="material-icons" style="font-size: 56px; color: var(--card-green); margin-bottom: 12px;">check_circle</span>
+                <p style="font-size: 1.1rem; font-weight: 600; color: var(--text-dark); margin-bottom: 8px;">Valid Reference Code!</p>
+                <small style="display: block; text-align: center; color: var(--text-light); line-height: 1.5; margin-bottom: 16px; padding: 0 10px;">
+                    Redirecting you to the live tracking records lookup panel...
+                </small>
+                
+                <button type="button" class="modal-submit btn-green" id="btn-status-proceed" style="width: 90%; margin: 0 auto;">Proceed to Tracking</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
